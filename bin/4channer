@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+source /home/si-mikey/.rvm/scripts/rvm
+
+rvm use 2.1.0 1> /dev/null
+
+ruby -W0 ~/code/ruby/4chan_term/4channer.rb
