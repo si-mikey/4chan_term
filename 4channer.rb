@@ -23,8 +23,9 @@ base_url = "http://boards.4chan.org/gif/"
     puts "###### Thread #{index} ######"
     puts "######-----------------######"
     puts ""
-    puts "open thread?: [y]es/[n]o/[q]uit"
+    puts "open thread?: [y]es/[n]o/[q]uit" if link != NoMethodError
     y_n = gets
+    y_n = 'n' if link == NoMethodError
     if y_n.strip == 'y'
       system("chromium-browser #{link} > /dev/null")
     elsif y_n.strip == 'q'
